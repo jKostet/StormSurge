@@ -3,3 +3,5 @@ StormSurge is a Battleships/Sea Battle inspired turn based game with bunch of sh
 StormSurge is developed as a course project at Department of Computer Science, University of Helsinki. [See course instructions here.](https://github.com/javaLabra/Javalabra2015-4)
 
 
+[![Code Climate](https://codeclimate.com/github/jKostet/StormSurge/badges/gpa.svg)](https://codeclimate.com/github/jKostet/StormSurge)
+[![Test Coverage](https://codeclimate.com/github/jKostet/StormSurge/badges/coverage.svg)](https://codeclimate.com/github/jKostet/StormSurge)
