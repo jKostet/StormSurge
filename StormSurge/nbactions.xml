@@ -64,4 +64,11 @@
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
+    <action>
+            <actionName>CUSTOM-make jar</actionName>
+            <displayName>make jar</displayName>
+            <goals>
+                <goal>package</goal>
+            </goals>
+        </action>
 </actions>
