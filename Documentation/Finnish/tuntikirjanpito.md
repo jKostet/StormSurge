@@ -11,8 +11,8 @@ Wed 11.03.2015, 2 hours, Kostet:
 
 ***
 
-Thu 12.03.2015, 2 hours, Kostet:
+Thu 12.03.2015, 3 hours, Kostet:
 * Sea class
 * Ship class
 * First tests
-
+* Project refactoring
