@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stormsurge.stormsurge;
+package stormsurge;
 
+import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import stormsurge.logic.Ship;
 
 /**
  *
  * @author jkostet
  */
-public class mainTest {
+public class shipTests {
     
-    public mainTest() {
+    public shipTests() {
     }
     
     @BeforeClass
@@ -44,7 +45,9 @@ public class mainTest {
     // public void hello() {}
     
     @Test
-    public void testHelloSea() {
-        assertTrue(null, ));
+    public void constructorSetsHealthRight() {
+        Ship s = new Ship(3);
+        
+        Assert.assertEquals(3, s.getHealth());
     }
 }
