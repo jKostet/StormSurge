@@ -16,3 +16,8 @@ Thu 12.03.2015, 3 hours, Kostet:
 * Ship class
 * First tests
 * Project refactoring
+
+***
+
+Fri 13.03.2015, 0,5 hours, Kostet:
+* Documentation
