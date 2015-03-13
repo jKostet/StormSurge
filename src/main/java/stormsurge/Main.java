@@ -6,8 +6,8 @@
 
 package stormsurge;
 
-import stormsurge.logic.Sea;
-import stormsurge.logic.Ship;
+import stormsurge.entities.Sea;
+import stormsurge.entities.Ship;
 
 /**
  *
@@ -26,11 +26,11 @@ public class Main {
     
     public static void main(String [ ] args){
         System.out.println("Hello Sea!");
-        
+        printHelloSea();
         
     }
     
-    public void printHelloSea() {
+    public static void printHelloSea() {
         System.out.println("Hello Sea!");
     }
 }
