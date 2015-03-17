@@ -9,3 +9,4 @@ StormSurge is developed as a course project at Department of Computer Science, U
 [See course instructions here.](https://github.com/javaLabra/Javalabra2015-4)
 
 * [Work Log](https://github.com/jKostet/StormSurge/blob/master/Documentation/Finnish/tuntikirjanpito.md)
+* [Trello Board](https://trello.com/b/dd3nvCJg/stormsurge-development)
