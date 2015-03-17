@@ -11,4 +11,29 @@ package stormsurge.entities;
  */
 public class Sea {
     
+    private int sizeX;
+    private int sizeY;
+//    private 
+    
+
+    public Sea(int x, int y) {
+        this.sizeX = x;
+        this.sizeY = y;
+    }
+
+    public int getSizeX() {
+        return sizeX;
+    }
+
+    public int getSizeY() {
+        return sizeY;
+    }
+
+    @Override
+    public String toString() {
+        return "X:" + sizeX + " * Y:" + sizeY + " = " + (sizeX * sizeY) + " tiles";
+    }
+    
+    
+    
 }
