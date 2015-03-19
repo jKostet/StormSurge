@@ -36,6 +36,10 @@ public class Ship {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         String shipname = "Unnamed Ship";
@@ -53,7 +57,7 @@ public class Ship {
         
         // If true, returns the normal toString() along with ships front and back coordinates
         if (withCoordinates) {
-            return toString() + " Front at " + frontPosX + "," + frontPosY +
+            return toString() + ", Front at " + frontPosX + "," + frontPosY +
                                 "; Back at " + backPosX + "," + backPosY;
         } else {
             return toString();
@@ -100,6 +104,14 @@ public class Ship {
                        break;
         }
         
+    }
+    
+    public String getFrontPos() {
+        return frontPosX + "," + frontPosY;
+    }
+    
+    public String getBackPos() {
+        return backPosX + "," + backPosY;
     }
 
 }
