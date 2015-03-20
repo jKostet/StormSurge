@@ -39,5 +39,11 @@ Thu 19.03.2015, 1 hour, Kostet:
 
 ***
 
-Fri 20.03.2015, x hours, Kostet:
-*
+Fri 20.03.2015, 2 hours, Kostet:
+* Fixed PIT configuration
+* Refactoring
+* Created class TextBasedUserInterface
+
+***
+
+
