@@ -39,33 +39,28 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
-                <!--        <configuration>
+                        <configuration>
                             <instrumentation>
                                 <includes>
-                                    <include>ristinolla/**/*.class</include> = ALL CLASSES
-                                    <include>ristinolla.logiikka/*.class</include>
-                                    <include>ristinolla.tekoaly/*.class</include>
+                                    <include>stormsurge/**/*.class</include>
                                 </includes>
                             </instrumentation>
                         </configuration>
-                -->        
                 <version>2.7</version>
             </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.4</version>
-                <!--        <configuration>
+                        <configuration>
                             <targetClasses>
-                                <param>ristinolla.logiikka.*</param>
-                                <param>ristinolla.tekoaly.*</param>
+                                <param>stormsurge.entities.*</param>
                             </targetClasses>
                             <targetTests>
-                                <param>ristinolla.logiikka.*</param>
-                                <param>ristinolla.tekoaly.*</param>
+                                <param>stormsurge.entities.*</param>
                             </targetTests>
                         </configuration>
-                -->    
+                    
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
