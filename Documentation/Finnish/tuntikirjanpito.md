@@ -31,3 +31,13 @@ Tue 17.03.2015, 2,5 hours, Kostet:
 * Ship positioning system based on frontPos x&y,    
   the length and the cardinal direction the ship is facing
 * Trello Board
+
+***
+
+Thu 19.03.2015, 1 hour, Kostet:
+* Bunch of JUnit Tests
+
+***
+
+Fri 20.03.2015, x hours, Kostet:
+*
