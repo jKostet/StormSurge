@@ -6,8 +6,7 @@
 
 package stormsurge;
 
-import stormsurge.entities.Sea;
-import stormsurge.entities.Ship;
+import stormsurge.logic.TextBasedUserInterface;
 
 /**
  *
@@ -25,42 +24,50 @@ import stormsurge.entities.Ship;
 public class Main {
     
     public static void main(String [ ] args){
-        System.out.println("Hello Sea!");
-        printHelloSea();
-        System.out.println("");
+//        System.out.println("Hello Sea!");
+//        printHelloSea();
+//        System.out.println("");
+//        
+//        
+//        Sea s = new Sea(4,5);
+//        System.out.println(s + "\n");
+//
+//        
+//        Ship boat = new Ship(4);
+//        System.out.println(boat + "\n");
+//
+//        
+//        boat.setName("USS Tester");
+//        System.out.println(boat);
+//        System.out.println(boat.toString(true) + "\n");
+//        
+//        
+//        System.out.println("--------------------------------- \n");
+//        
+//        Ship a = new Ship(2);
+//        Ship b = new Ship(3);
+//        Ship c = new Ship(3);
+//
+//        
+//        boat.setFrontPos(1, 1, 'N');
+//        System.out.println(boat.toString(true));
+//        
+//        a.setFrontPos(4, 1, 'W');
+//        System.out.println(a.toString(true));
+//        
+//        b.setFrontPos(4, 5, 'S');
+//        System.out.println(b.toString(true));
+//        
+//        c.setFrontPos(2, 7, 'E');
+//        System.out.println(c.toString(true));
+//        
+//        System.out.println("\n --------------------------------- \n");
+//        
+//        s.drawSea();
+//        System.out.println("");
         
-        
-        Sea s = new Sea(4,5);
-        System.out.println(s + "\n");
-
-        
-        Ship boat = new Ship(4);
-        System.out.println(boat + "\n");
-
-        
-        boat.setName("USS Tester");
-        System.out.println(boat);
-        System.out.println(boat.toString(true) + "\n");
-        
-        
-        System.out.println("--------------------------------- \n");
-        
-        Ship a = new Ship(2);
-        Ship b = new Ship(3);
-        Ship c = new Ship(3);
-
-        
-        boat.setFrontPos(1, 1, 'N');
-        System.out.println(boat.toString(true));
-        
-        a.setFrontPos(4, 1, 'W');
-        System.out.println(a.toString(true));
-        
-        b.setFrontPos(4, 5, 'S');
-        System.out.println(b.toString(true));
-        
-        c.setFrontPos(2, 7, 'E');
-        System.out.println(c.toString(true));
+        TextBasedUserInterface tbui = new TextBasedUserInterface();
+        tbui.run();
     }
     
     public static void printHelloSea() {

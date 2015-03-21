@@ -5,12 +5,15 @@
  */
 package stormsurge.entities;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jkostet
  */
 public class Sea {
     
+    private ArrayList<Ship> Ships;
     private int sizeX;
     private int sizeY;
 //    private 
@@ -19,6 +22,7 @@ public class Sea {
     public Sea(int x, int y) {
         this.sizeX = x;
         this.sizeY = y;
+        this.Ships = new ArrayList<>();
     }
 
     public int getSizeX() {
@@ -33,7 +37,21 @@ public class Sea {
     public String toString() {
         return "X:" + sizeX + " * Y:" + sizeY + " = " + (sizeX * sizeY) + " tiles";
     }
+
+    public ArrayList getShips() {
+        return Ships;
+    }
     
+    public void addShip(Ship ship) {
+        this.Ships.add(ship);
+    }
     
-    
+    public void drawSea() {
+        for (int y = 0; y < sizeY; y++) {
+            for (int x = 0; x < sizeX; x++) {
+                System.out.print("[ ]");
+            }
+            System.out.println();
+        }
+    }
 }
