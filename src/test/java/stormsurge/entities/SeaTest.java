@@ -37,5 +37,15 @@ public class SeaTest {
     public void toStringCorrectlyReturnsSeaDimensionsAndTotalTiles() {
         assertEquals("X:6 * Y:5 = 30 tiles", testSea.toString());
     }
+    
+    @Test
+    public void drawSeaInTextMethodCorrectlyDrawsAnEmptySea() {
+        assertEquals("[ ][ ][ ][ ][ ][ ]\n" +
+                     "[ ][ ][ ][ ][ ][ ]\n" +
+                     "[ ][ ][ ][ ][ ][ ]\n" +
+                     "[ ][ ][ ][ ][ ][ ]\n" +
+                     "[ ][ ][ ][ ][ ][ ]\n",
+                     testSea.drawSeaInText());
+    }
             
 }

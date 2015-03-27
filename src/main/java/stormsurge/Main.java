@@ -64,14 +64,16 @@ public class Main {
 //        
 //        System.out.println("\n --------------------------------- \n");
 //        
-//        s.drawSea();
+//        s.drawSeaInText();
 //        System.out.println("");
         
         Sea testSea = new Sea(5,5);
         
-        TextBasedUserInterface tbui = new TextBasedUserInterface();
-        tbui.setSea(testSea);
-        tbui.run();
+//        TextBasedUserInterface tbui = new TextBasedUserInterface();
+//        tbui.setSea(testSea);
+//        tbui.run();
+        
+        System.out.println(testSea.drawSeaInText());
         
 //        System.out.println(testSea.listShips());
     }

@@ -5,7 +5,6 @@
  */
 package stormsurge.entities;
 
-import java.util.ArrayList;
 import stormsurge.logic.ShipList;
 
 /**
@@ -53,13 +52,19 @@ public class Sea {
         this.shipList.getShips().add(ship);
     }
     
-    public void drawSea() {
+    public String drawSeaInText() {
+//        String seaString = "";
+        StringBuilder sb = new StringBuilder();
         for (int y = 0; y < sizeY; y++) {
             for (int x = 0; x < sizeX; x++) {
-                System.out.print("[ ]");
+//                System.out.print("[ ]");
+                sb.append("[ ]");
             }
-            System.out.println();
+//            System.out.println();
+            sb.append("\n");
         }
+        
+        return sb.toString();
     }
 
     public boolean listShips() {
