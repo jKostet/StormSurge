@@ -6,6 +6,8 @@
 package stormsurge.logic;
 
 import java.util.Scanner;
+import stormsurge.entities.Sea;
+import stormsurge.entities.Ship;
 
 /**
  *
@@ -15,6 +17,7 @@ public class TextBasedUserInterface {
     
     private Scanner commands;
     private boolean running;
+    private Sea sea;
 
     
     public TextBasedUserInterface() {
@@ -48,6 +51,7 @@ public class TextBasedUserInterface {
             case 1 : System.out.println("This will draw the Sea");
                      break;
             case 2 : System.out.println("This will add ships");
+                     addShipToSea();
                      break;
             case 0 : running = false;
                      break;
@@ -55,5 +59,18 @@ public class TextBasedUserInterface {
                      break;
         }
     }
+
+    public void setSea(Sea sea) {
+        this.sea = sea;
+    }
     
+    public void addShipToSea() {
+        System.out.println("Ship length:");
+        int shipLength = Integer.parseInt(commands.nextLine());
+        Ship ship = new Ship(shipLength);
+        this.sea.addShip(ship);
+//                     System.out.println(sea.getShips().get(sea.getShips().lastIndexOf(sea)));
+        System.out.println(ship + " added to the Sea.");
+    }
+
 }

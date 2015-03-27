@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.008" errors="0" skipped="0" tests="11" name="stormsurge.entities.ShipTest">
+<testsuite failures="0" time="0.009" errors="0" skipped="0" tests="11" name="stormsurge.entities.ShipTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -62,7 +62,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0" classname="stormsurge.entities.ShipTest" name="toStringWithCoordinatesFalseJustReturnsToString"/>
+  <testcase time="0.001" classname="stormsurge.entities.ShipTest" name="toStringWithCoordinatesFalseJustReturnsToString"/>
   <testcase time="0" classname="stormsurge.entities.ShipTest" name="shipHasNoNameBeforeItIsNamed"/>
   <testcase time="0" classname="stormsurge.entities.ShipTest" name="constructorSetsHealthRight"/>
   <testcase time="0" classname="stormsurge.entities.ShipTest" name="setFrontPosFacingNorth"/>

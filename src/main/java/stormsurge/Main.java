@@ -6,6 +6,7 @@
 
 package stormsurge;
 
+import stormsurge.entities.Sea;
 import stormsurge.logic.TextBasedUserInterface;
 
 /**
@@ -66,8 +67,13 @@ public class Main {
 //        s.drawSea();
 //        System.out.println("");
         
+        Sea testSea = new Sea(5,5);
+        
         TextBasedUserInterface tbui = new TextBasedUserInterface();
+        tbui.setSea(testSea);
         tbui.run();
+        
+//        System.out.println(testSea.listShips());
     }
     
     public static void printHelloSea() {
