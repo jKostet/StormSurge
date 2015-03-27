@@ -1,5 +1,6 @@
-[![Code Climate](https://codeclimate.com/github/jKostet/StormSurge/badges/gpa.svg)](https://codeclimate.com/github/jKostet/StormSurge)
+<!---[![Code Climate](https://codeclimate.com/github/jKostet/StormSurge/badges/gpa.svg)](https://codeclimate.com/github/jKostet/StormSurge)
 [![Test Coverage](https://codeclimate.com/github/jKostet/StormSurge/badges/coverage.svg)](https://codeclimate.com/github/jKostet/StormSurge)
+-->
 [![Build Status](https://travis-ci.org/jKostet/StormSurge.svg)](https://travis-ci.org/jKostet/StormSurge)
 
 
