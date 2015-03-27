@@ -50,7 +50,10 @@ Mon 23.03.2015, 2 hours, Kostet:
 * Work on TextBasedUserInterface
 * Figuring out how to list ships
 
-**
+***
 
-Tue 24.03.2015, x hours, Kostet:
-*
+Fri 27.03.2015, 1 hour, Kostet:
+* Minor refactoring
+* Tests
+
+***
