@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package stormsurge.logic;
 
 import java.util.Scanner;
@@ -13,6 +9,13 @@ import stormsurge.entities.Ship;
  *
  * @author jkostet
  */
+
+
+/**     TODO
+ *      - Perhaps implement interface using Java 8 command pattern
+ */
+
+
 public class TextBasedUserInterface {
     
     private Scanner commands;
@@ -28,8 +31,10 @@ public class TextBasedUserInterface {
     public void run() {
         printCommands();
         while (running) {
-            int command = Integer.parseInt(commands.nextLine());
-            performCommand(command);
+//            int command = Integer.parseInt(commands.nextLine());
+//            performCommand(command);
+            String command = commands.nextLine();
+            executeCommand(command);
         }
     }
     
@@ -45,18 +50,29 @@ public class TextBasedUserInterface {
                         +  "0: Stop program\n");
     }
     
-    public void performCommand(int command) {
+    public void executeCommand(String command) {
         
         switch(command) {
-            case 1 : System.out.println("This will draw the Sea");
-                     break;
-            case 2 : System.out.println("This will add ships");
-                     addShipToSea();
-                     break;
-            case 0 : running = false;
-                     break;
-            default: printCommands();
-                     break;
+                    
+                        // Draw the Sea
+            case "1" :  System.out.println(this.sea.drawSeaInText());
+                        break;
+                
+                        // Add ships to the Sea
+            case "2" :  addShipToSea();
+                        break;
+                
+                        // Print the list of commands (wow useful)
+            case "3" :  printCommands();
+                        break;
+                
+                        // Stop the program
+            case "0" :  running = false;
+                        break;
+                
+                        // Unknown command requests will print the list of valid commands
+            default:    printCommands();
+                        break;
         }
     }
 
