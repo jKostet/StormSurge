@@ -7,7 +7,7 @@
 package stormsurge;
 
 import stormsurge.entities.Sea;
-import stormsurge.logic.TextBasedUserInterface;
+import stormsurge.logic.GUI_MainMenu;
 
 /**
  *
@@ -26,11 +26,14 @@ public class Main {
     
     public static void main(String [ ] args){
         Sea testSea = new Sea(5,5);
+//        
+//        TextBasedUserInterface tbui = new TextBasedUserInterface();
+//        tbui.setSea(testSea);
+//        tbui.run();
         
-        TextBasedUserInterface tbui = new TextBasedUserInterface();
-        tbui.setSea(testSea);
-        tbui.run();
+//        GUI_ButtonListener bl = new GUI_ButtonListener();
         
+        GUI_MainMenu mm = new GUI_MainMenu();
         
         
 //        System.out.println(testSea.drawSeaInText());

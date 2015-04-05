@@ -28,7 +28,7 @@ Tue 17.03.2015, 2,5 hours, Kostet:
 * Class diagram with yuml.me
 * Sea size calculations
 * Ship information, toString() methods
-* Ship positioning system based on frontPos x&y,    
+* Ship positioning system based on frontPos x&y, 
   the length and the cardinal direction the ship is facing
 * Trello Board
 
@@ -64,4 +64,17 @@ Tue 31.03.2015, 2 hours, Kostet:
 * Created class GUI_MainMenu
 
 ***
+
+Thu 02.04.2015, 1 hour, Kostet:
+* Peer review for another student's project
+
+***
+
+Sun 05.04.2015, x hours, Kostet:
+* GUI
+
+
+
+
+
 
