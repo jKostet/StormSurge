@@ -21,20 +21,41 @@ public class TextBasedUserInterface {
     private Scanner commands;
     private boolean running;
     private Sea sea;
+    
+    //test
+    private KeyListener kl;
 
     
     public TextBasedUserInterface() {
         commands = new Scanner(System.in);
         running = true;
+        
+        this.kl = new KeyListener();
     }
     
     public void run() {
+        boolean update = false;
+        
+        
+        // If true, will draw the sea after each command
+        System.out.println("Constantly draw the sea? y/n");
+        String draw = commands.nextLine();
+        if (draw == "y") {
+            update = true;
+        }
+        
+        this.kl.processKeys();
+        
         printCommands();
+        
         while (running) {
-//            int command = Integer.parseInt(commands.nextLine());
-//            performCommand(command);
             String command = commands.nextLine();
             executeCommand(command);
+            
+            if (update) {
+                this.sea.drawSeaInText();
+                System.out.println("debug");
+            }
         }
     }
     
@@ -85,7 +106,6 @@ public class TextBasedUserInterface {
         int shipLength = Integer.parseInt(commands.nextLine());
         Ship ship = new Ship(shipLength);
         this.sea.addShip(ship);
-//                     System.out.println(sea.getShips().get(sea.getShips().lastIndexOf(sea)));
         System.out.println(ship + " added to the Sea.");
     }
 

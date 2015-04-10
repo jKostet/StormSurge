@@ -65,8 +65,18 @@ Tue 31.03.2015, 2 hours, Kostet:
 
 ***
 
-Thu 02.04.2015, x hours, Kostet:
-* Code review for another student's project
+Thu 02.04.2015, 1 hour, Kostet:
+* Peer review for another student's project
+
+***
+
+Sun 05.04.2015, 3 hours, Kostet:
+* GUI
+* Messing around with the directory structure
+  * broke travis for now :(
+  * git revert moving code to it's own directory
+* Thinking about using LibGDX
+  * Will focuse on text based functionality for now though
 
 
 

@@ -70,11 +70,21 @@ Thu 02.04.2015, 1 hour, Kostet:
 
 ***
 
-Sun 05.04.2015, x hours, Kostet:
+Sun 05.04.2015, 3 hours, Kostet:
 * GUI
+* Messing around with the directory structure
+  * broke travis for now :(
+  * git revert moving code to it's own directory
+* Thinking about using LibGDX
+  * Will focuse on text based functionality for now though
 
+***
 
+Mon-Thu 6.-9.4, 4 hours, Kostet:
+* Stuff and Things - Rick Grimes
 
+***
 
-
+Fri 10.4, hours, Kostet:
+* 
 
