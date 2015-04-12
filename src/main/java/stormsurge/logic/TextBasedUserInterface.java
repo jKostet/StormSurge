@@ -80,7 +80,7 @@ public class TextBasedUserInterface {
                         break;
                 
                         // Add ships to the Sea
-            case "2" :  addShipToSea();
+            case "2" :  // addShipToSea();
                         break;
                 
                         // Print the list of commands (wow useful)
@@ -101,12 +101,12 @@ public class TextBasedUserInterface {
         this.sea = sea;
     }
     
-    public void addShipToSea() {
-        System.out.println("Ship length:");
-        int shipLength = Integer.parseInt(commands.nextLine());
-        Ship ship = new Ship(shipLength);
-        this.sea.addShip(ship);
-        System.out.println(ship + " added to the Sea.");
-    }
+//    public void addShipToSea() {
+//        System.out.println("Ship length:");
+//        int shipLength = Integer.parseInt(commands.nextLine());
+//        Ship ship = new Ship(shipLength);
+//        this.sea.addShip(ship);
+//        System.out.println(ship + " added to the Sea.");
+//    }
 
 }

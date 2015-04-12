@@ -1,5 +1,8 @@
 /home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/entities/Ship.java
 /home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/Main.java
+/home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/logic/GUI_ButtonListener.java
+/home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/entities/Fleet.java
+/home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/logic/GUI_MainMenu.java
 /home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/entities/Sea.java
-/home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/logic/ShipList.java
+/home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/logic/KeyListener.java
 /home/jkostet/KOODIS/javalabra/StormSurge/src/main/java/stormsurge/logic/TextBasedUserInterface.java
