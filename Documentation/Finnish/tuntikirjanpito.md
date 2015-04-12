@@ -80,11 +80,22 @@ Sun 05.04.2015, 3 hours, Kostet:
 
 ***
 
-Mon-Thu 6.-9.4, 4 hours, Kostet:
+Mon-Thu 06.-09.04.2015, 4 hours, Kostet:
 * Stuff and Things - Rick Grimes
 
 ***
 
-Fri 10.4, hours, Kostet:
-* 
+Fri 10.04.2015, 2 hours, Kostet:
+* Thinking about stuff and things
 
+***
+
+Sat 11.04.2015, 0,5 hours, Kostet:
+* Updated class diagram
+
+***
+
+Sun 12.04.2015,  hours, Kostet:
+* Created BattleController
+* Created Fleet class
+* Removed ShipList class

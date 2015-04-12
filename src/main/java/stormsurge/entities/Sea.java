@@ -5,8 +5,6 @@
  */
 package stormsurge.entities;
 
-import stormsurge.logic.ShipList;
-
 /**
  *
  * @author jkostet
@@ -14,7 +12,6 @@ import stormsurge.logic.ShipList;
 public class Sea {
     
 //    private ArrayList<Ship> Ships;
-    private ShipList shipList;
     
     private int sizeX;
     private int sizeY;
@@ -23,8 +20,6 @@ public class Sea {
     public Sea(int x, int y) {
         this.sizeX = x;
         this.sizeY = y;
-//        this.Ships = new ArrayList<>();
-        this.shipList = new ShipList();
     }
 
     public int getSizeX() {
@@ -40,34 +35,19 @@ public class Sea {
         return "X:" + sizeX + " * Y:" + sizeY + " = " + (sizeX * sizeY) + " tiles";
     }
 
-    //THIS SHOULD RETURN LIST OF SHIPS
-//    public ArrayList getShips() {
-////        return Ships;
-//        return shipList;
-//    }
-    
-    // Adds ship to the ShipList's list of ships
-    public void addShip(Ship ship) {
-//        this.Ships.add(ship);
-        this.shipList.getShips().add(ship);
-    }
-    
     public String drawSeaInText() {
-//        String seaString = "";
         StringBuilder sb = new StringBuilder();
+        
         for (int y = 0; y < sizeY; y++) {
+            
             for (int x = 0; x < sizeX; x++) {
-//                System.out.print("[ ]");
                 sb.append("[ ]");
             }
-//            System.out.println();
+            
             sb.append("\n");
         }
         
         return sb.toString();
     }
 
-    public boolean listShips() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
