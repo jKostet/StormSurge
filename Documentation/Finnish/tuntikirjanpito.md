@@ -95,12 +95,12 @@ Sat 11.04.2015, 0,5 hours, Kostet:
 
 ***
 
-Sun 12.04.2015, 2 hours, Kostet:
+Sun 12.04.2015, 3 hours, Kostet:
 * Created BattleController class
 * Created GraphicsController class
 * Created Fleet class
 * Removed ShipList class
-* 
+
 
 
 
