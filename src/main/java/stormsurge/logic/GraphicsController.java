@@ -15,4 +15,21 @@ public class GraphicsController {
      *  in graphical representation
      *  and text only
      */
+    
+    private GUI_MainMenu mainMenu;
+    private GUI_ButtonListener buttonListener;
+    
+    // If true, render game only in text
+    private boolean textOnly;
+
+    public GraphicsController(boolean textOnly) {
+        this.textOnly = textOnly;
+        
+        this.mainMenu = new GUI_MainMenu();
+        this.buttonListener = new GUI_ButtonListener();
+    }
+    
+    
+    
+    
 }
