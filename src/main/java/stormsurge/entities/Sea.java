@@ -10,9 +10,6 @@ package stormsurge.entities;
  * @author jkostet
  */
 public class Sea {
-    
-//    private ArrayList<Ship> Ships;
-    
     private int sizeX;
     private int sizeY;
     

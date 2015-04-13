@@ -6,9 +6,8 @@
 
 package stormsurge;
 
-import stormsurge.entities.Sea;
-import stormsurge.logic.GUI_MainMenu;
-import stormsurge.logic.TextBasedUserInterface;
+import stormsurge.entities.Fleet;
+import stormsurge.entities.Ship;
 
 /**
  *
@@ -26,18 +25,33 @@ import stormsurge.logic.TextBasedUserInterface;
 public class Main {
     
     public static void main(String [ ] args){
-        Sea testSea = new Sea(5,5);
-//        
-        TextBasedUserInterface tbui = new TextBasedUserInterface();
-        tbui.setSea(testSea);
-        tbui.run();
+//        Sea testSea = new Sea(5,5);
+////        
+//        TextBasedUserInterface tbui = new TextBasedUserInterface();
+//        tbui.setSea(testSea);
+//        tbui.run();
         
 //        GUI_ButtonListener bl = new GUI_ButtonListener();
 //        GUI_MainMenu mm = new GUI_MainMenu();
         
-//        System.out.println(testSea.drawSeaInText());
+        Fleet p = new Fleet("Pirates");
+        Fleet f = new Fleet("French Navy");
         
-//        System.out.println(testSea.listShips());
+        Ship q = new Ship(5);
+        q.setName("Queen Anne's Revenge");
+        
+        p.addShipToFleet(q);
+        p.addShipToFleet(new Ship(1));
+        p.addShipToFleet(new Ship(2));
+        p.addShipToFleet(new Ship(3));
+        p.addShipToFleet(new Ship(4));
+
+        System.out.println(p.toString());
+        
+        System.out.println("--------NOSTATS---------");
+        
+        System.out.println(p.toString(true));
+
     }
     
     public static void printHelloSea() {

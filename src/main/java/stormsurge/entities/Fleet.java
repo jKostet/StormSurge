@@ -27,14 +27,19 @@ public class Fleet {
     public ArrayList<Ship> getShips() {
         return ships;
     }
+    
+    public void addShipToFleet(Ship ship) {
+        this.ships.add(ship);
+    }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("");
+        StringBuilder sb = new StringBuilder(100);
         
         sb.append(name).append(":\n");
         for (Ship ship : ships) {
-            sb.append(ships.indexOf(ship)).append(". ");
+            // Adding + 1 to index, so listing starts from 1, not 0.
+            sb.append(ships.indexOf(ship) + 1).append(". ");
             sb.append(ship).append("\n");
         }
         
@@ -49,6 +54,7 @@ public class Fleet {
 
             sb.append(name).append(":\n");
             for (Ship ship : ships) {
+                // Adding + 1 to index, so listing starts from 1, not 0.
                 sb.append(ships.indexOf(ship)).append(". ");
                 sb.append(ship.getName()).append("\n");
             }

@@ -20,7 +20,7 @@ public class Ship {
     private int backPosY;
 
     public Ship(int length) {
-        this.name      = "";
+        this.name      = "Unnamed Ship";
         
         this.length    = length;
         this.health    = length;
@@ -42,15 +42,15 @@ public class Ship {
 
     @Override
     public String toString() {
-        String shipname = "Unnamed Ship";
-        
-        // Should the ship be named, use it's name instead
-        if (!this.name.isEmpty()) {
-            shipname = name;
-        }
+//        String shipname = "Unnamed Ship";
+//        
+//        // Should the ship be named, use it's name instead
+//        if (!this.name.isEmpty()) {
+//            shipname = name;
+//        }
         
         // Return Ships name, length and health
-        return "Ship: " + shipname + ", Length: " + length + ", Health: " + health;
+        return this.name + ", Length: " + length + ", Health: " + health;
     }
 
     public String toString(boolean withCoordinates) {
