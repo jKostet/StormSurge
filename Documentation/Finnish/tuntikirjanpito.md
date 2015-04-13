@@ -101,6 +101,11 @@ Sun 12.04.2015, 3 hours, Kostet:
 * Created Fleet class
 * Removed ShipList class
 
+***
+
+Mon 13.04.2015, ? hours, Kostet:
+* Updated Fleet, Ship
+*
 
 
 
