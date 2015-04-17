@@ -29,13 +29,8 @@ public class ShipTest {
     }
     
     @Test
-    public void shipHasNoNameBeforeItIsNamed() {
-        assertEquals("", testShip.getName());
-    }
-    
-    @Test
     public void toStringReturnsUnnamedShipIfTheShipIsNotNamed() {
-        assertEquals("Ship: Unnamed Ship, Length: 3, Health: 3", testShip.toString());
+        assertEquals("Unnamed Ship, Length: 3, Health: 3", testShip.toString());
     }
     
     @Test
@@ -47,17 +42,17 @@ public class ShipTest {
     @Test
     public void afterNameHasBeenSetToStringReturnsItToo() {
         testShip.setName("Mighty Test Ship");
-        assertEquals("Ship: Mighty Test Ship, Length: 3, Health: 3", testShip.toString());
+        assertEquals("Mighty Test Ship, Length: 3, Health: 3", testShip.toString());
     }
     
     @Test
     public void toStringWithCoordinatesReturnsToStringAlongWithShipFrontAndBackPos() {
-        assertEquals("Ship: Unnamed Ship, Length: 3, Health: 3, Front at 0,0; Back at 0,0", testShip.toString(true));
+        assertEquals("Unnamed Ship, Length: 3, Health: 3, Front at 0,0; Back at 0,0", testShip.toString(true));
     }
     
     @Test
     public void toStringWithCoordinatesFalseJustReturnsToString() {
-        assertEquals("Ship: Unnamed Ship, Length: 3, Health: 3", testShip.toString(false));
+        assertEquals("Unnamed Ship, Length: 3, Health: 3", testShip.toString(false));
     }
     
     @Test
