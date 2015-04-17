@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stormsurge.entities;
 
 /**
@@ -14,6 +9,12 @@ public class Sea {
     private int sizeY;
     
 
+    /**
+     * Creates a new Sea of size x * y.
+     * 
+     * @param x width of the sea
+     * @param y height of the sea
+     */
     public Sea(int x, int y) {
         this.sizeX = x;
         this.sizeY = y;
@@ -27,11 +28,24 @@ public class Sea {
         return sizeY;
     }
 
+    /**
+     * Returns the size of the Sea.
+     * Drawing the Sea is done via
+     * method drawSeaInText().
+     * 
+     * @return string
+     */
     @Override
     public String toString() {
         return "X:" + sizeX + " * Y:" + sizeY + " = " + (sizeX * sizeY) + " tiles";
     }
 
+    /**
+     * Using StringBuilder, draws the Sea in String format
+     * tile (sum of coordinates) by tile.
+     * 
+     * @return completed String representation of the Sea
+     */
     public String drawSeaInText() {
         StringBuilder sb = new StringBuilder();
         

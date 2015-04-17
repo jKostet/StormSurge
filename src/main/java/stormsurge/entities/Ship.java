@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stormsurge.entities;
 
 /**
@@ -31,6 +26,13 @@ public class Ship {
         this.backPosY  = 0;
     }
 
+    /**
+     * Gives the ship a name, as
+     * Ships are created with
+     * default name "Unnamed Ship".
+     * 
+     * @param name to be given
+     */
     public void setName(String name) {
         // Names the ship
         this.name = name;
@@ -53,6 +55,13 @@ public class Ship {
         return this.name + ", Length: " + length + ", Health: " + health;
     }
 
+    /**
+     * The toString() method
+     * with the Ship's coordinates added to the end.
+     * 
+     * @param withCoordinates true for coordinates, false for just toString()
+     * @return toString() with coordinates
+     */
     public String toString(boolean withCoordinates) {
         
         // If true, returns the normal toString() along with ships front and back coordinates
@@ -68,6 +77,16 @@ public class Ship {
         return health;
     }
     
+    /**
+     * Sets the coordinates for the Ship's
+     * frontend, then calculates coordinates
+     * for the backend using the length of the ship
+     * and the way the Ship is facing.
+     * 
+     * @param X the x coordinate
+     * @param Y the y coordinate
+     * @param facing N for North/Up, S for South/Down, E for East/Right, W for West/Left
+     */
     public void setFrontPos(int X, int Y, char facing) {
         
         // This will set the ship's front's position accordingly
