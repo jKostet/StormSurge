@@ -110,8 +110,11 @@ Mon 13.04.2015, 2 hours, Kostet:
 
 ***
 
-Fri 17.04.2015, 3 hours, Kostet:
-*
+Fri 17.04.2015, 2 hours, Kostet:
+* Sequence diagrams
+* Comments for JavaDoc
+
+***
 
 
 
