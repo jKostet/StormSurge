@@ -116,5 +116,12 @@ Fri 17.04.2015, 2 hours, Kostet:
 
 ***
 
+Wed 22.04.2015, 1 hours, Kostet:
+* Work on FleetStatusPanel
+* Testing on JFrame
+
+***
+
+
 
 

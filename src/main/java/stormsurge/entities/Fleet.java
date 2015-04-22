@@ -34,6 +34,15 @@ public class Fleet {
     }
 
     /**
+     * Returns the name of the Fleet
+     * 
+     * @return the name of the Fleet
+     */
+    public String getName() {
+        return name;
+    }
+    
+    /**
      * Returns the list of ships in this Fleet.
      * 
      * @return the list of ships
