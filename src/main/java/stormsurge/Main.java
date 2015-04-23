@@ -41,24 +41,15 @@ public class Main {
 //        
 //        System.out.println(p.toString(true));
         FleetStatusPanel FSP = new FleetStatusPanel();
-        FSP.setFleet(french);
         
-        JFrame testframe = new JFrame();
-        testframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        FSP.setFleet(p);
         
-        testframe.setLayout(new FlowLayout());
+        FSP.listFleet();
         
-        testframe.add(FSP);
-        
-        // set testframe size px,px
-        testframe.setSize(new Dimension(350,400));
-        // set testframe to appear in middle of screen
-        testframe.setLocationRelativeTo(null);
-        
-        
-        testframe.setVisible(true);
         FSP.setVisible(true);
         
+        
+        System.out.println("woop");
     }
     
     public static void printHelloSea() {

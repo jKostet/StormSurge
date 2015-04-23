@@ -5,6 +5,11 @@
  */
 package stormsurge.logic;
 
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import stormsurge.entities.Fleet;
 import stormsurge.entities.Ship;
 
@@ -15,12 +20,20 @@ import stormsurge.entities.Ship;
 public class FleetStatusPanel extends javax.swing.JPanel {
 
     private Fleet fleet;
+    private JFrame frame0;
     
     /**
      * Creates new form FleetStatusPanel
      */
     public FleetStatusPanel() {
         this.fleet = new Fleet("no fleet");
+        this.frame0 = new JFrame();
+        frame0.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame0.setLayout(new FlowLayout());
+        // set testframe size px,px
+        frame0.setSize(new Dimension(350,400));
+        // set testframe to appear in middle of screen
+        frame0.setLocationRelativeTo(null);
         initComponents();
     }
     
@@ -148,9 +161,26 @@ public class FleetStatusPanel extends javax.swing.JPanel {
  *  for each ship in the fleet
  */
 public void listFleet() {
+    
+    
     jTextField2.setText(this.fleet.getName());
+    jTextField2.setEditable(false);
+    
+    frame0.setLayout(new GridLayout(fleet.getShips().size(), 1));
+    
+    System.out.println("dank ");
+    
+    int counter = 0;
+    
     for (Ship ship : fleet.getShips()) {
         // Create new JPanel with the ships name, picture and health bar
+        System.out.println(counter + " " + ship);
+        JPanel tempPanelForShip = jPanel2;
+        System.out.println("memes " + tempPanelForShip.getComponents());
+        frame0.add(tempPanelForShip);
+        counter++;
+    
+    frame0.setVisible(true);
     }
 }
 
