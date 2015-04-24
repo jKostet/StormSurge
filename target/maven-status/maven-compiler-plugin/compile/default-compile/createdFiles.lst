@@ -4,7 +4,6 @@ stormsurge/entities/Sea.class
 stormsurge/logic/GUI_ButtonListener.class
 stormsurge/logic/BattleController.class
 stormsurge/logic/GUI_MainMenu$4.class
-stormsurge/logic/GUI_ButtonListener$2.class
 stormsurge/logic/TextBasedUserInterface.class
 stormsurge/entities/Ship.class
 stormsurge/logic/KeyListener$1.class

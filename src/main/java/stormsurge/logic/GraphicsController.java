@@ -5,6 +5,7 @@
  */
 package stormsurge.logic;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -112,6 +113,8 @@ public class GraphicsController implements Runnable {
 
 
             JProgressBar bar = new JProgressBar(0, ship.getHealth());
+            bar.setBackground(Color.red);
+            bar.setForeground(Color.green);
             bar.setValue(ship.getHealth() - ship.getDamaged());
             bar.setStringPainted(true);
     //        temppa.add(bar);

@@ -15,16 +15,27 @@ import static org.junit.Assert.*;
  */
 public class FleetTest {
     
-    public FleetTest() {
-    }
+    private Fleet testFleet;
     
     @Before
     public void setUp() {
-    }
+        testFleet = new Fleet("Testers");
+        Ship test1 = new Ship(1);
+        Ship test2 = new Ship(2);
+        Ship test3 = new Ship(3);
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+        testFleet.addShipToFleet(test1);
+        testFleet.addShipToFleet(test2);
+        testFleet.addShipToFleet(test3);
+    }
+    
+    @Test
+    public void toStringWorks() {
+        //TODO
+    }
+    
+    @Test
+    public void toStringNoStatsWorks() {
+        //TODO
+    }
 }

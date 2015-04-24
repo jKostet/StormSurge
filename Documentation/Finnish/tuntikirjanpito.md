@@ -122,13 +122,15 @@ Wed 22.04.2015, 1 hours, Kostet:
 
 ***
 
-Fri 24.04.2015, 3 hours, Kostet:
+Fri 24.04.2015, 5 hours, Kostet:
 * Work on FleetStatusPanel
 * Updated Ship
 * Game screen with game, fleet stats and control panels
   * This will need massive refactoring
 * Created Tile class
-* 
+* Updated Sea to be represented with Tiles
+* Created TileTest
+* Updated FleetTest
 
 
 

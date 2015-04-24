@@ -25,6 +25,9 @@ public class Tile extends JPanel {
         this.face = new JPanel();
         face.setSize(16, 16);
         
+        this.xCoordinate = -1;
+        this.yCoordinate = -1;
+        
         this.selected = false;
         this.destroyed = false;
         this.hasShip = false;
@@ -71,6 +74,16 @@ public class Tile extends JPanel {
             return "[_]";
         }
     }
+
+    public int getxCoordinate() {
+        return xCoordinate;
+    }
+
+    public int getyCoordinate() {
+        return yCoordinate;
+    }
     
-    
+    public String getCoordinates() {
+        return "(" + xCoordinate + "," + yCoordinate + ")";
+    }
 }

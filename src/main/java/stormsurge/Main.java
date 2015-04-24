@@ -56,12 +56,15 @@ public class Main {
 //        FSP.listFleet();
 //        FSP.setVisible(true);
         
+        Tile ttt = new Tile();
+        System.out.println(ttt);
+        System.out.println(ttt.getCoordinates());
         
-        GraphicsController GC = new GraphicsController(false);
-//        GC.setupGC();
-//        GC.fleetStats.setFleet(p);
-        GC.setFleet(p);
-        GC.run();
+//        GraphicsController GC = new GraphicsController(false);
+////        GC.setupGC();
+////        GC.fleetStats.setFleet(p);
+//        GC.setFleet(p);
+//        GC.run();
     }
     
     public static void printHelloSea() {
