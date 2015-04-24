@@ -8,7 +8,10 @@ public class Ship {
 
     private String name;
     private int length;
+    
     private int health;
+    private int damaged;
+    
     private int frontPosX;
     private int frontPosY;
     private int backPosX;
@@ -18,7 +21,9 @@ public class Ship {
         this.name      = "Unnamed Ship";
         
         this.length    = length;
+        
         this.health    = length;
+        this.damaged   = 0;
         
         this.frontPosX = 0;
         this.frontPosY = 0;
@@ -133,4 +138,15 @@ public class Ship {
         return backPosX + "," + backPosY;
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getDamaged() {
+        return damaged;
+    }
+    
+    public void damageShip(int damage) {
+        this.damaged += damage;
+    }
 }
