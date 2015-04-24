@@ -127,7 +127,8 @@ Fri 24.04.2015, 3 hours, Kostet:
 * Updated Ship
 * Game screen with game, fleet stats and control panels
   * This will need massive refactoring
-
+* Created Tile class
+* 
 
 
 
