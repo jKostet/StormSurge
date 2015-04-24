@@ -35,6 +35,12 @@ public class Main {
         p.addShipToFleet(new Ship(3));
         p.addShipToFleet(new Ship(4));
 
+        Ship u = new Ship(3);
+        u.setName("Damaged test");
+        u.damageShip(1);
+        
+        p.addShipToFleet(u);
+        
 //        System.out.println(p.toString());
 //        
 //        System.out.println("--------NOSTATS---------");

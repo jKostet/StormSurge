@@ -10,6 +10,8 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JTextField;
 import stormsurge.entities.Fleet;
 import stormsurge.entities.Ship;
 
@@ -50,12 +52,48 @@ public class FleetStatusPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
+        jFrame3 = new javax.swing.JFrame();
         jTextField2 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jProgressBar1 = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
+        jFrame3.getContentPane().setLayout(jFrame3Layout);
+        jFrame3Layout.setHorizontalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame3Layout.setVerticalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         jTextField2.setText("FLEETNAMEHERE");
 
@@ -147,9 +185,20 @@ public class FleetStatusPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
+    private javax.swing.JFrame jFrame3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -162,26 +211,45 @@ public class FleetStatusPanel extends javax.swing.JPanel {
  */
 public void listFleet() {
     
+    JTextField fleetNameField = new JTextField();
+    fleetNameField.setText(this.fleet.getName());
+    fleetNameField.setEditable(false);
     
-    jTextField2.setText(this.fleet.getName());
-    jTextField2.setEditable(false);
     
-    frame0.setLayout(new GridLayout(fleet.getShips().size(), 1));
+//    frame0.setLayout(new GridLayout(fleet.getShips().size(), 1));
     
-    System.out.println("dank ");
+    frame0.add(fleetNameField);
     
-    int counter = 0;
     
     for (Ship ship : fleet.getShips()) {
         // Create new JPanel with the ships name, picture and health bar
-        System.out.println(counter + " " + ship);
-        JPanel tempPanelForShip = jPanel2;
-        System.out.println("memes " + tempPanelForShip.getComponents());
-        frame0.add(tempPanelForShip);
-        counter++;
+        JPanel temppa = new JPanel();
+        temppa.setLayout(new GridLayout(1,2));
+        
+        JTextField temp = new JTextField();
+        temp.setText(ship.getName());
+//        frame0.add(temp);
+        temppa.add(temp);
+        
+        JPanel picHPholder = new JPanel(new GridLayout(2, 1));
+        JTextField tempPIC = new JTextField("picture here");
+        
+        
+        JProgressBar bar = new JProgressBar(0, ship.getHealth());
+        bar.setValue(ship.getHealth() - ship.getDamaged());
+        bar.setStringPainted(true);
+//        temppa.add(bar);
+        
+        picHPholder.add(tempPIC);
+        picHPholder.add(bar);
+        
+        temppa.add(picHPholder);
+        
+        frame0.add(temppa);
+    }
     
     frame0.setVisible(true);
-    }
+    
 }
 
 
