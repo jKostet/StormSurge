@@ -22,18 +22,20 @@ import javax.swing.JFrame;
 
 public class GUI_ButtonListener {
  
+    private JButton newGame;
+    
     public GUI_ButtonListener() {
         
     }
     
-    private static void createAndShowGUI()  {
+    public void setNewGame(JButton nG) {
+        this.newGame = nG;
+    }
+    
+    public void createAndShowGUI()  {
  
-        JFrame frame1 = new JFrame("JAVA");
-        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
- 
-        JButton button = new JButton(" >> JavaProgrammingForums.com <<");
         //Add action listener to button
-        button.addActionListener(new ActionListener() {
+        newGame.addActionListener(new ActionListener() {
  
             public void actionPerformed(ActionEvent e)
             {
@@ -42,17 +44,5 @@ public class GUI_ButtonListener {
             }
         });      
  
-        frame1.getContentPane().add(button);
-        frame1.pack();
-        frame1.setVisible(true);
-    }
- 
- 
-    public static void main(String[] args) {
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
     }
 }

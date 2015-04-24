@@ -232,7 +232,7 @@ public void listFleet() {
         temppa.add(temp);
         
         JPanel picHPholder = new JPanel(new GridLayout(2, 1));
-        JTextField tempPIC = new JTextField("picture here");
+        JTextField tempPIC = new JTextField("[picture of the ship]");
         
         
         JProgressBar bar = new JProgressBar(0, ship.getHealth());

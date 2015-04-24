@@ -1,5 +1,8 @@
 package stormsurge.entities;
 
+import java.util.ArrayList;
+import javax.swing.JPanel;
+
 /**
  *
  * @author jkostet
@@ -8,7 +11,10 @@ public class Sea {
     private int sizeX;
     private int sizeY;
     
-
+    private ArrayList<Tile> tiles;
+    
+    private JPanel seaPanel;
+    
     /**
      * Creates a new Sea of size x * y.
      * 
@@ -18,6 +24,21 @@ public class Sea {
     public Sea(int x, int y) {
         this.sizeX = x;
         this.sizeY = y;
+        
+        generateTiles(x, y);
+    }
+    
+    private void generateTiles(int x, int y) {
+        
+        int xCoord = 0;
+        int yCoord = 0;
+        
+        
+        for ( int tilesHigh = 0; tilesHigh < y; tilesHigh++ ) {
+            for ( int tilesWide = 0; tilesWide < x; tilesWide++ ) {
+                
+            }
+        }
     }
 
     public int getSizeX() {
@@ -61,4 +82,7 @@ public class Sea {
         return sb.toString();
     }
 
+    public JPanel getSeaPanel() {
+        
+    }
 }

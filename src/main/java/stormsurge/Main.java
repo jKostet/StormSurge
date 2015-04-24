@@ -34,10 +34,14 @@ public class Main {
         p.addShipToFleet(new Ship(2));
         p.addShipToFleet(new Ship(3));
         p.addShipToFleet(new Ship(4));
+        p.addShipToFleet(new Ship(5));
+        p.addShipToFleet(new Ship(6));
+        p.addShipToFleet(new Ship(7));
+
 
         Ship u = new Ship(3);
         u.setName("Damaged test");
-        u.damageShip(1);
+        u.damageShip(7);
         
         p.addShipToFleet(u);
         
@@ -46,16 +50,18 @@ public class Main {
 //        System.out.println("--------NOSTATS---------");
 //        
 //        System.out.println(p.toString(true));
-        FleetStatusPanel FSP = new FleetStatusPanel();
         
-        FSP.setFleet(p);
-        
-        FSP.listFleet();
-        
-        FSP.setVisible(true);
+//        FleetStatusPanel FSP = new FleetStatusPanel();
+//        FSP.setFleet(p);
+//        FSP.listFleet();
+//        FSP.setVisible(true);
         
         
-        System.out.println("woop");
+        GraphicsController GC = new GraphicsController(false);
+//        GC.setupGC();
+//        GC.fleetStats.setFleet(p);
+        GC.setFleet(p);
+        GC.run();
     }
     
     public static void printHelloSea() {

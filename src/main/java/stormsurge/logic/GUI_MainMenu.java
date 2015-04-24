@@ -5,6 +5,8 @@
  */
 package stormsurge.logic;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author jkostet
@@ -218,6 +220,10 @@ public class GUI_MainMenu extends javax.swing.JFrame {
         });
     }
 
+    public JButton getNewGameButton() {
+        return jButton1;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
