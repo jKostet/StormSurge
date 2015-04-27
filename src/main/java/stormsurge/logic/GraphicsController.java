@@ -34,6 +34,7 @@ public class GraphicsController implements Runnable {
     
     private FleetStatusPanel fleetStats;
     private Fleet fleet;
+    private Sea sea;
     
     private JPanel tempFSPfix;
     
@@ -43,6 +44,10 @@ public class GraphicsController implements Runnable {
     public void setFleet(Fleet fleet) {
         this.fleet = fleet;
         this.tempFSPfix = new JPanel();
+    }
+
+    public void setSea(Sea sea) {
+        this.sea = sea;
     }
     
     public GraphicsController(boolean textOnly) {
@@ -69,7 +74,8 @@ public class GraphicsController implements Runnable {
         JPanel gameAndControl = new JPanel(new GridLayout(2, 1));
         game2x2.add(gameAndControl);
         
-        gameAndControl.add(new JTextArea(new Sea(10,10).drawSeaInText(), 10,10));
+//        gameAndControl.add(new JTextArea(new Sea(10,10).drawSeaInText(), 10,10));
+        gameAndControl.add(this.sea.getSeaPanel());
         tempFixFSP();
         game2x2.add(tempFSPfix);
 //        fleetStats.listFleet();

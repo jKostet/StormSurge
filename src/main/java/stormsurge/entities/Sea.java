@@ -90,6 +90,7 @@ public class Sea {
     }
 
     public JPanel getSeaPanel() {
+//        seaPanel.setVisible(true);
         return seaPanel;
     }
 

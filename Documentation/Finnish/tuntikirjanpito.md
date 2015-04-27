@@ -132,6 +132,13 @@ Fri 24.04.2015, 5 hours, Kostet:
 * Created TileTest
 * Updated FleetTest
 
+***
+
+Mon 27.04.2015, x hours, Kostet:
+* Update GraphicsController
+* Update pom.xml with Shade plugin
+  * Create .jar
+* 
 
 
 
