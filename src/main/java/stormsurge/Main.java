@@ -1,11 +1,8 @@
 
 package stormsurge;
 
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import javax.swing.JFrame;
 import stormsurge.entities.*;
-import stormsurge.logic.*;
+import stormsurge.logic.GraphicsController;
 
 /**
  *
@@ -23,7 +20,7 @@ public class Main {
     
     public static void main(String [ ] args){
         
-        Fleet p = new Fleet("Pirates");
+        Fleet p = new Fleet("Pirate fleet of YARRR");
         Fleet french = new Fleet("French Navy");
         
         Ship q = new Ship(5);
@@ -59,13 +56,25 @@ public class Main {
 //        Tile ttt = new Tile();
 //        System.out.println(ttt);
 //        System.out.println(ttt.getCoordinates());
-        
+//        
         GraphicsController GC = new GraphicsController(false);
         GC.setSea(new Sea(8,8));
 //        GC.setupGC();
 //        GC.fleetStats.setFleet(p);
         GC.setFleet(p);
         GC.run();
+        
+//        Sea s = new Sea(8,8);
+//        JFrame frame = new JFrame();
+//        JPanel pp = s.getSeaPanel();
+//        pp.setVisible(true);
+//
+//        frame.add(pp);
+//        frame.setVisible(true);
+//        frame.setSize(400, 400);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
     }
     
     public static void printHelloSea() {

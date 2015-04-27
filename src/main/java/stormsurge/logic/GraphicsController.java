@@ -6,8 +6,11 @@
 package stormsurge.logic;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
+import javax.swing.GroupLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
@@ -62,7 +65,6 @@ public class GraphicsController implements Runnable {
     @Override
     public void run() {
         
-//        setupGC();
         this.mainMenu.setSize(800, 600);
         this.mainMenu.setVisible(true);
         JFrame game2x2 = new JFrame();
@@ -74,13 +76,20 @@ public class GraphicsController implements Runnable {
         JPanel gameAndControl = new JPanel(new GridLayout(2, 1));
         game2x2.add(gameAndControl);
         
-//        gameAndControl.add(new JTextArea(new Sea(10,10).drawSeaInText(), 10,10));
         gameAndControl.add(this.sea.getSeaPanel());
         tempFixFSP();
         game2x2.add(tempFSPfix);
-//        fleetStats.listFleet();
-//        game2x2.add(fleetStats);
-        gameAndControl.add(new JTextField("[CONTROLS HERE]"));
+        
+        
+//        gameAndControl.add(new JTextField("[CONTROLS HERE]"));
+        JPanel topControl = new JPanel(new FlowLayout());
+        JPanel controls = new JPanel();
+        controls.setLayout(new GridLayout(2, 1));
+        controls.add(new JTextField("[Controls here]"));
+        controls.add(new JButton("FIRE"));
+        
+        topControl.add(controls);
+        gameAndControl.add(topControl);
         
         game2x2.setVisible(true);
         
@@ -93,6 +102,9 @@ public class GraphicsController implements Runnable {
     
     public void tempFixFSP() {
 
+//        tempFSPfix.setLayout(new GridLayout(2, 1));
+        tempFSPfix.setLayout(new FlowLayout());
+        
         JTextField fleetNameField = new JTextField();
         fleetNameField.setText(this.fleet.getName());
         fleetNameField.setEditable(false);
@@ -103,7 +115,7 @@ public class GraphicsController implements Runnable {
         tempFSPfix.add(fleetNameField);
 //        JPanel shipsPanel = new JPanel();
 
-
+        JPanel topTemppa = new JPanel(new GridLayout(fleet.getShips().size(), 1));
         for (Ship ship : fleet.getShips()) {
             // Create new JPanel with the ships name, picture and health bar
             JPanel temppa = new JPanel();
@@ -129,10 +141,11 @@ public class GraphicsController implements Runnable {
             picHPholder.add(bar);
 
             temppa.add(picHPholder);
-
+            topTemppa.add(temppa);
 //            shipsPanel.add(temppa);
-            tempFSPfix.add(temppa);
         }
+        tempFSPfix.add(topTemppa);
+
 //        tempFSPfix.add(shipsPanel);
         tempFSPfix.setVisible(true);
 

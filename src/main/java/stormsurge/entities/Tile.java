@@ -5,13 +5,14 @@
  */
 package stormsurge.entities;
 
-import javax.swing.JPanel;
+import javax.swing.Icon;
+import javax.swing.JButton;
 
 /**
  *
  * @author jkostet
  */
-public class Tile extends JPanel {
+public class Tile extends JButton /* JPanel  */ {
     private boolean selected;
     private boolean destroyed;
     private boolean hasShip;
@@ -19,11 +20,14 @@ public class Tile extends JPanel {
     private int xCoordinate;
     private int yCoordinate;
     
-    private JPanel face;
+//    private JPanel face;
+    private JButton face;
 
     public Tile() {
-        this.face = new JPanel();
-        face.setSize(16, 16);
+//        this.face = new JPanel();
+        this.face = new JButton();
+//        face.setSize(8, 8);
+        this.face.setText("ayy");
         
         this.xCoordinate = -1;
         this.yCoordinate = -1;

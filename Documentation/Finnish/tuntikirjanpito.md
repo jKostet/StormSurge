@@ -138,7 +138,7 @@ Mon 27.04.2015, x hours, Kostet:
 * Update GraphicsController
 * Update pom.xml with Shade plugin
   * Create .jar
-* 
+* Changed Tiles from JPanels to JButtons
 
 
 

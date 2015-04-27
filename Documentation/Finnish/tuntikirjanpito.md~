@@ -136,8 +136,9 @@ Fri 24.04.2015, 5 hours, Kostet:
 
 Mon 27.04.2015, x hours, Kostet:
 * Update GraphicsController
-* Create .jar
-
+* Update pom.xml with Shade plugin
+  * Create .jar
+* 
 
 
 
