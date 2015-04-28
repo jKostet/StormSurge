@@ -48,6 +48,11 @@ public class GraphicsController implements Runnable {
     public void setSea(Sea sea) {
         this.sea = sea;
     }
+
+    public Sea getSea() {
+        return sea;
+    }
+    
     
     public GraphicsController(boolean textOnly) {
         this.textOnly = textOnly;

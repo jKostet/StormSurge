@@ -145,7 +145,7 @@ Mon 27.04.2015, 4 hours, Kostet:
 Tue 28.04.2015, 2 hours, Kostet:
 * Update Tile
 * Update Sea
-
+* Update GC to show seaPanel with Tiles
 
 
 

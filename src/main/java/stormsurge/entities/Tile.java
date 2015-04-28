@@ -21,6 +21,8 @@ public class Tile extends JButton /* JPanel  */ {
     private boolean addingShips;
     private ActionListener actionListener;
     
+    private boolean textOnly;
+    
     private int xCoordinate;
     private int yCoordinate;
     
@@ -38,25 +40,40 @@ public class Tile extends JButton /* JPanel  */ {
         this.hasShip = false;
         this.addingShips = false;
         
+        this.textOnly = false;
+        
+        setActionListener();
     }
     
     private void setActionListener() {
-        this.actionListener = new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                //Destroy
-            }
-        };
+        addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setDestroyed(true);
+                updateTextAndTooltip();
+                
+//                System.out.println("memes @" + getCoordinates() + destroyed);
+                if (hasShip) {
+                    System.out.println("Hit at " + getCoordinates());
+                } else {
+                    System.out.println("Miss at " + getCoordinates());
+                } 
+            };
+        });
     }
+    
+    
     
     public void setCoordinates(int x, int y) {
         this.xCoordinate = x;
         this.yCoordinate = y;
         
-        setText(getCoordinates());
+        updateTextAndTooltip();
+    }
+    
+    private void updateTextAndTooltip() {
+        //        setText(getCoordinates());
+        setText(toString());
         setToolTipText(getCoordinates());
-        
     }
 
     public void setAddingShips(boolean addingShips) {
@@ -89,16 +106,26 @@ public class Tile extends JButton /* JPanel  */ {
     
     @Override
     public String toString() {
-        if (isSelected) {
-            return "[@]";
-        } else if (destroyed && hasShip) {
-            return "[X]";
-        } else if (destroyed && !hasShip) {
-            return "[x]";
-        } else {
-            return "[_]";
-        }
+//        if (textOnly) {
+//            return "[" + toString() + "]";
+//        } else {
+            if (isSelected) {
+                return "@";
+            } else if (destroyed && hasShip) {
+                return "X";
+            } else if (destroyed && !hasShip) {
+                return "x";
+            } else {
+                return "_";
+            }
+//        }
     }
+
+    public void setTextOnly(boolean textOnly) {
+        this.textOnly = textOnly;
+    }
+    
+    
 
     public int getxCoordinate() {
         return xCoordinate;
