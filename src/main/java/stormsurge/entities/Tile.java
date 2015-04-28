@@ -5,6 +5,8 @@
  */
 package stormsurge.entities;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.JButton;
 
@@ -13,9 +15,11 @@ import javax.swing.JButton;
  * @author jkostet
  */
 public class Tile extends JButton /* JPanel  */ {
-    private boolean selected;
+    private boolean isSelected;
     private boolean destroyed;
     private boolean hasShip;
+    private boolean addingShips;
+    private ActionListener actionListener;
     
     private int xCoordinate;
     private int yCoordinate;
@@ -24,24 +28,41 @@ public class Tile extends JButton /* JPanel  */ {
     private JButton face;
 
     public Tile() {
-//        this.face = new JPanel();
         this.face = new JButton();
-//        face.setSize(8, 8);
-        this.face.setText("ayy");
         
         this.xCoordinate = -1;
         this.yCoordinate = -1;
         
-        this.selected = false;
+        this.isSelected = false;
         this.destroyed = false;
         this.hasShip = false;
+        this.addingShips = false;
+        
+    }
+    
+    private void setActionListener() {
+        this.actionListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                //Destroy
+            }
+        };
     }
     
     public void setCoordinates(int x, int y) {
         this.xCoordinate = x;
         this.yCoordinate = y;
+        
+        setText(getCoordinates());
+        setToolTipText(getCoordinates());
+        
     }
 
+    public void setAddingShips(boolean addingShips) {
+        this.addingShips = addingShips;
+    }
+    
     public void setDestroyed(boolean destroyed) {
         this.destroyed = destroyed;
     }
@@ -50,12 +71,12 @@ public class Tile extends JButton /* JPanel  */ {
         return destroyed;
     }
 
-    public void setSelected(boolean selected) {
-        this.selected = selected;
+    public void setIsSelected(boolean selected) {
+        this.isSelected = selected;
     }
     
-    public boolean getSelected() {
-        return selected;
+    public boolean getIsSelected() {
+        return isSelected;
     }
 
     public void setHasShip(boolean ship) {
@@ -68,7 +89,7 @@ public class Tile extends JButton /* JPanel  */ {
     
     @Override
     public String toString() {
-        if (selected) {
+        if (isSelected) {
             return "[@]";
         } else if (destroyed && hasShip) {
             return "[X]";

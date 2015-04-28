@@ -66,6 +66,7 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="83" green="b5" red="2a" type="rgb"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="jjjjjjj"/>
       </Properties>
 
       <Layout>
@@ -133,6 +134,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="CREDITS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField1">
           <Properties>
@@ -141,10 +145,11 @@
               <Color blue="c0" green="de" red="87" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="L M Mono Caps10" size="36" style="0"/>
+              <Font name="Dialog" size="24" style="2"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="STORM SURGE"/>
+            <Property name="toolTipText" type="java.lang.String" value="ayyy test"/>
             <Property name="name" type="java.lang.String" value="titleText" noResource="true"/>
           </Properties>
           <Events>
@@ -155,11 +160,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="LOAD GAME"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="text" type="java.lang.String" value="OPTIONS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField2">
           <Properties>
@@ -167,6 +178,9 @@
             <Property name="text" type="java.lang.String" value="PLAYER"/>
             <Property name="name" type="java.lang.String" value="playerName" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>

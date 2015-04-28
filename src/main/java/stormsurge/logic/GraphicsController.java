@@ -8,15 +8,11 @@ package stormsurge.logic;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
-import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SpringLayout;
 import stormsurge.entities.Fleet;
 import stormsurge.entities.Sea;
 import stormsurge.entities.Ship;
@@ -65,10 +61,18 @@ public class GraphicsController implements Runnable {
     @Override
     public void run() {
         
+        
         this.mainMenu.setSize(800, 600);
-        this.mainMenu.setVisible(true);
+//        this.mainMenu.setVisible(true);
+        this.mainMenu.setLocationRelativeTo(null);
+        this.mainMenu.setTitle("Storm Surge main menu");
+
+
         JFrame game2x2 = new JFrame();
         game2x2.setSize(800, 600);
+        game2x2.setLocationRelativeTo(null);
+        game2x2.setTitle("Storm Surge game window");
+
         game2x2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         game2x2.setLayout(new GridLayout(1,2));
@@ -92,7 +96,9 @@ public class GraphicsController implements Runnable {
         gameAndControl.add(topControl);
         
         game2x2.setVisible(true);
-        
+        this.mainMenu.setVisible(true);
+//                BgIJF bg = new BgIJF();
+
     }
     
     public void setupGC() {
@@ -148,7 +154,6 @@ public class GraphicsController implements Runnable {
 
 //        tempFSPfix.add(shipsPanel);
         tempFSPfix.setVisible(true);
-
     }
     
 }

@@ -6,6 +6,7 @@
 package stormsurge.logic;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 
 /**
  *
@@ -24,6 +25,9 @@ public class GUI_MainMenu extends javax.swing.JFrame {
      */
     public GUI_MainMenu() {
         initComponents();
+//        BgIJF bg = new BgIJF();
+//        remove(jPanel2);
+//        add(bg);
     }
 
     /**
@@ -62,6 +66,7 @@ public class GUI_MainMenu extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(42, 181, 131));
+        jPanel2.setToolTipText("jjjjjjj");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -77,12 +82,18 @@ public class GUI_MainMenu extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(42, 182, 171));
 
         jButton4.setText("CREDITS");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(135, 222, 192));
-        jTextField1.setFont(new java.awt.Font("L M Mono Caps10", 0, 36)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Dialog", 2, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("STORM SURGE");
+        jTextField1.setToolTipText("ayyy test");
         jTextField1.setName("titleText"); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,12 +102,27 @@ public class GUI_MainMenu extends javax.swing.JFrame {
         });
 
         jButton2.setText("LOAD GAME");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("OPTIONS");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("PLAYER");
         jTextField2.setName("playerName"); // NOI18N
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("NEW GAME");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -173,13 +199,40 @@ public class GUI_MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    // NEW GAME BUTTON
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        dispose();
+        
+        // Get player's name from the name field
+        String playerName = jTextField2.getText();
+        System.out.println(playerName);
+        
+        // OPEN GAME WINDOW
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    // QUIT GAME BUTTON
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    // CREDITS BUTTON
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    // OPTIONS BUTTON
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    // LOAD GAME BUTTON
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments

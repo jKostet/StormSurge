@@ -134,13 +134,16 @@ Fri 24.04.2015, 5 hours, Kostet:
 
 ***
 
-Mon 27.04.2015, x hours, Kostet:
+Mon 27.04.2015, 4 hours, Kostet:
 * Update GraphicsController
 * Update pom.xml with Shade plugin
   * Create .jar
+* Changed Tiles from JPanels to JButtons
+
+***
+
+Tue 28.04.2015, 2 hours, Kostet:
 * 
-
-
 
 
 

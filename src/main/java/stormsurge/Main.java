@@ -1,8 +1,8 @@
 
 package stormsurge;
 
+import javax.swing.JFrame;
 import stormsurge.entities.*;
-import stormsurge.logic.GraphicsController;
 
 /**
  *
@@ -57,12 +57,36 @@ public class Main {
 //        System.out.println(ttt);
 //        System.out.println(ttt.getCoordinates());
 //        
-        GraphicsController GC = new GraphicsController(false);
-        GC.setSea(new Sea(8,8));
+//        GraphicsController GC = new GraphicsController(false);
+//        GC.setSea(new Sea(10,10));
 //        GC.setupGC();
 //        GC.fleetStats.setFleet(p);
-        GC.setFleet(p);
-        GC.run();
+//        GC.setFleet(p);
+//        GC.run();
+        
+        Sea yee = new Sea(10 , 10);
+        JFrame frank = new JFrame();
+        frank.setLocationRelativeTo(null);
+        frank.add(yee.getSeaPanel());
+        frank.setVisible(true);
+        frank.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frank.setSize(400, 400);
+        
+        int i = 1;
+        for (Tile tile  : yee.getTiles()) {
+            System.out.print(tile.getCoordinates());
+            System.out.print(" ");
+            if ( i == 10 ) {
+                System.out.println("");
+                i = 0;
+            }
+            i++;
+        }
+        
+        System.out.println("");
+        
+        
+        
         
 //        Sea s = new Sea(8,8);
 //        JFrame frame = new JFrame();
