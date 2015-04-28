@@ -1,7 +1,8 @@
 
 package stormsurge;
 
-import javax.swing.JFrame;
+import java.awt.Color;
+import java.util.ArrayList;
 import stormsurge.entities.*;
 import stormsurge.logic.GraphicsController;
 
@@ -20,6 +21,8 @@ import stormsurge.logic.GraphicsController;
 public class Main {
     
     public static void main(String [ ] args){
+        
+        Sea seeea = new Sea(10,10);
         
         Fleet p = new Fleet("Pirate fleet of YARRR");
         Fleet french = new Fleet("French Navy");
@@ -47,6 +50,30 @@ public class Main {
         p.addShipToFleet(two);
         p.addShipToFleet(one);
 
+        // THIS NEEDS TO HAPPEN IN BATTLECONTROLLER
+        // Connecting Ship coordinates to the corresponding Tiles
+        for (Ship ship : p.getShips()) {
+//            HashMap<Integer, Integer> temp = new HashMap();
+            
+            ArrayList<String> coords = new ArrayList();
+            
+            
+            // find coords from ship
+            String front = "(" + ship.getFrontPos() + ")";
+            String back  = "(" + ship.getBackPos()  + ")";
+            
+            for (Tile tile : seeea.getTiles()) {
+                int x = tile.getxCoordinate();
+                int y = tile.getyCoordinate();
+                
+                if ( tile.getCoordinates().equals(back) || tile.getCoordinates().equals(front) ) {
+                    tile.setHasShip(true);
+                    tile.setShip(ship);
+                    tile.setForeground(Color.red);
+                }
+            }
+        }
+        
 //        Ship u = new Ship(3);
 //        u.setName("Damaged test");
 //        u.damageShip(7);
@@ -69,7 +96,7 @@ public class Main {
 //        System.out.println(ttt.getCoordinates());
 //        
         GraphicsController GC = new GraphicsController(false);
-        GC.setSea(new Sea(10,10));
+        GC.setSea(seeea);
 //        GC.setupGC();
 //        GC.fleetStats.setFleet(p);
         GC.setFleet(p);

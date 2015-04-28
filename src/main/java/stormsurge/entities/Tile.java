@@ -28,6 +28,7 @@ public class Tile extends JButton /* JPanel  */ {
     
 //    private JPanel face;
     private JButton face;
+    private Ship ship;
 
     public Tile() {
         this.face = new JButton();
@@ -42,6 +43,8 @@ public class Tile extends JButton /* JPanel  */ {
         
         this.textOnly = false;
         
+        
+        
         setActionListener();
     }
     
@@ -54,14 +57,17 @@ public class Tile extends JButton /* JPanel  */ {
 //                System.out.println("memes @" + getCoordinates() + destroyed);
                 if (hasShip) {
                     System.out.println("Hit at " + getCoordinates());
+                    ship.damageShip(1);
                 } else {
                     System.out.println("Miss at " + getCoordinates());
                 } 
             };
         });
     }
-    
-    
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
+    }
     
     public void setCoordinates(int x, int y) {
         this.xCoordinate = x;
@@ -112,11 +118,11 @@ public class Tile extends JButton /* JPanel  */ {
             if (isSelected) {
                 return "@";
             } else if (destroyed && hasShip) {
-                return "X";
+                return "S";
             } else if (destroyed && !hasShip) {
                 return "x";
             } else {
-                return "_";
+                return " ";
             }
 //        }
     }
